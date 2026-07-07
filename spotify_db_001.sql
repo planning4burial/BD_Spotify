@@ -3,7 +3,7 @@ CREATE TABLE artists (
     name VARCHAR(255) NOT NULL,
     bio TEXT,
     verified BOOLEAN DEFAULT FALSE,
-    profile_image_url VARCHAR(512),
+    profile_image_url VARCHAR(512)
 );
 
 CREATE TABLE users (
@@ -12,7 +12,7 @@ CREATE TABLE users (
     email VARCHAR(255) NOT NULL UNIQUE,
     password_hash VARCHAR(255) NOT NULL,
     country_code CHAR(2) NOT NULL,
-    date_of_birth DATE NOT NULL,
+    date_of_birth DATE NOT NULL
 );
 
 
@@ -22,7 +22,7 @@ CREATE TABLE albums (
     release_date DATE NOT NULL,
     cover_art_url VARCHAR(512),
     artist_id INT,
-    CONSTRAINT fk_artist FOREIGN KEY (artist_id) REFERENCES artists(artist_id) ON DELETE SET NULL,
+    CONSTRAINT fk_artist FOREIGN KEY (artist_id) REFERENCES artists(artist_id) ON DELETE SET NULL
 );
 
 

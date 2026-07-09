@@ -1,10 +1,7 @@
 -- 1. Atualizar a tabela de usuários (users)
 ALTER TABLE users 
-ADD COLUMN IF NOT EXISTS plan_type spotify_plan DEFAULT 'free', -- Ajuste o 'free' para o valor padrão do seu enum, se necessário
+ADD COLUMN IF NOT EXISTS plan_type spotify_plan DEFAULT 'free',
 ADD COLUMN IF NOT EXISTS account_creation_date DATE DEFAULT CURRENT_DATE;
-
--- Nota: Se você deseja remover a coluna antiga 'is_premium' que ficou redundante com o 'plan_type', desinale a linha abaixo:
--- ALTER TABLE users DROP COLUMN IF EXISTS is_premium;
 
 
 -- 2. Atualizar a tabela de álbuns (albums)
@@ -29,7 +26,6 @@ CREATE TABLE IF NOT EXISTS user_track_playback (
 );
 
 
--- 5. Criar o ENUM para o status do Match (caso não tenha criado antes)
 -- Usamos um bloco DO para evitar erros caso o tipo já exista no banco remoto
 DO $$ 
 BEGIN

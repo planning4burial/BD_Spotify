@@ -1,1 +1,1 @@
-Projeto de disciplina para recriar um banco de dados similar ao do spotify.<br>Banco populado com consultas prontas: https://supabase.com/dashboard/project/eagoizqkezemqavvqflt<br>Discentes: Jean Souza, Jean Remédios, Emanoel Neto
+Projeto de disciplina para recriar um banco de dados similar ao do spotify.<br>Banco populado com consultas prontas: https://supabase.com/dashboard/project/eagoizqkezemqavvqflt<br><br>Discentes: Jean Souza, Jean Remédios, Emanoel Neto
